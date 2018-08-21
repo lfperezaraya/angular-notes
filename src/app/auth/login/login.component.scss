@@ -1,0 +1,141 @@
+/* General Style */
+main {
+	height: 100vh;
+}
+
+/* Header */
+header {
+	margin-top: 16px;
+}
+
+.header-content img {
+	width: 150px;
+	height: 150px;
+}
+
+.header-content h1 {
+	color: #283593;
+	font-size: 2.5em;
+	font-weight: normal;
+	margin: .3em 0;
+}
+
+.header-content h3 {
+	color: #616161;
+	font-size: 1.3em;
+	font-weight: lighter;
+	margin: 0;
+}
+
+/* Login Card */
+mat-card {
+	margin-top: 24px;
+	width: 380px;
+	padding: 1.3em 2em;
+	background-color: #fafafa;
+}
+
+mat-card mat-form-field {
+	width: 100%;
+}
+
+mat-card button[type="submit"] {
+	margin-top: 8px;
+	padding: 5px 0;
+	width: 100%;
+	text-transform: uppercase;
+}
+
+mat-card button[type="button"] {
+	margin-top: 15px;
+	font-size: .9em;
+	float: right;
+}
+
+mat-card mat-progress-bar {
+	width: 100%;
+	position: absolute;
+	right: 0;
+	left: 0;
+	bottom: 0;
+}
+
+/* Features */
+.features-container h3 {
+	font-weight: lighter;
+	font-size: 1em;
+	margin: 48px 0 18px;
+	color: #616161;
+}
+
+mat-icon {
+	cursor: default;
+	margin: 0 5px;
+	color: #283593;
+}
+
+/* Footer */
+footer {
+	border-top: 1px solid #EEE;
+	background-color: #fafafa;
+	height: 45px;
+	min-height: 45px;
+	padding: .5em;
+	margin-top: 45px;
+}
+
+.footer-content a, .footer-content span {
+	padding: 5px;
+	text-decoration: none;
+	font-size: .75em;
+	color: #757575;
+}
+
+.footer-content a:hover {
+	text-decoration: underline;
+}
+
+/* Responsive */
+@media screen and (max-width: 480px) {
+	/* Header */
+	.header-content img {
+		width: 125px;
+		height: 125px;
+	}
+
+	.header-content h1 {
+		font-size: 1.8em;
+		margin: .5em 0;
+	}
+
+	/* Login Card */
+	mat-card {
+		margin-top: 0;
+		width: 80%;
+		padding: 1em;
+	}
+
+	/* Features */
+	.features-container h3 {
+		font-size: .95em;
+		margin: 32px 0 12px;
+	}
+
+	mat-icon {
+		margin: 0 3px;
+		font-size: 1.3em;
+	}
+
+	/* Footer */
+	.footer-content a, .footer-content span {
+		padding: 3px;
+		font-size: .7em;
+	}
+}
+
+@media screen and (max-width: 680px) {
+	/* Header */
+	.header-content h3 {
+		display: none;
+	}
+}

@@ -1,3 +1,71 @@
-<p>
-  login works!
-</p>
+<main fxLayout="column" fxFill>
+	<!-- Header -->
+	<header>
+		<div class="header-content" fxLayout="column" fxLayoutAlign="center center">
+			<img src="../../../assets/notes.svg" alt="Angular Notes">
+			<h1>Angular Notes</h1>
+			<h3>Don't remember it, write it down. Sign in to continue.</h3>
+		</div>
+	</header>
+
+	<!-- Middle Section -->
+	<section fxFlex>
+		<div class="section-content" fxLayout fxLayoutAlign="center center">
+			<mat-card>
+				<form
+					fxLayout="column"
+					fxLayoutAlign="center center"
+					fxLayoutGap="15px"
+					[formGroup]="loginForm">
+					<mat-form-field>
+						<input
+							matInput
+							type="email"
+							placeholder="Username"
+							formControlName="email">
+						<mat-error>Invalid username</mat-error>
+					</mat-form-field>
+					<mat-form-field>
+						<input
+							matInput
+							type="password"
+							placeholder="Password"
+							formControlName="password">
+						<mat-error>Invalid password</mat-error>
+					</mat-form-field>
+					<button
+						mat-raised-button
+						color="primary"
+						type="submit">Sign in</button>
+				</form>
+				<button
+					mat-button
+					color="primary"
+					type="button"
+					class="recover-button">Forgot your password?</button>
+				<mat-progress-bar mode="indeterminate" color="primary" *ngIf="!hiddenProgressBar"></mat-progress-bar>
+			</mat-card>
+		</div>
+
+		<!-- Features Container -->
+		<section class="features-container" fxLayout="column" fxLayoutAlign="center center">
+			<h3>Easy and fast, just write it down.</h3>
+			<div class="features" fxLayout fxLayoutAlign="center center">
+				<mat-icon matTooltip="Your notes in the cloud">assignment</mat-icon>
+				<mat-icon matTooltip="Multiple devices">devices</mat-icon>
+				<mat-icon matTooltip="Google based security">security</mat-icon>
+			</div>
+		</section>
+	</section>
+
+	<!-- Footer -->
+	<footer fxLayout fxLayoutAlign="center center">
+		<div class="footer-content" fxLayout="row wrap" fxLayoutAlign="center center">
+			<a href="">About</a>
+			<a href="">Terms</a>
+			<a href="">Privacy</a>
+			<a href="">Help</a>
+			<span>© 2018 Luis Perez</span>
+		</div>
+	</footer>
+</main>
